@@ -1,4 +1,6 @@
+#!/usr/bin/python
 import pprint
+
 class Puzzle(object):
 	"""docstring for Puzzle"""
 	def __init__(self, data):
@@ -78,25 +80,6 @@ class Puzzle(object):
 			for coln in line:
 				res.append(coln)
 		return res
-
-
-	def checkIsSolv(self):
-		if self.checkSnail() == self.solution:
-			self.printPuzzle()
-			print ''
-			print 'WINNER'
-			print ''
-			return True
-		else:
-			return False
-
-	def printPuzzle(self):
-		print '##############################'
-		print '########   TAQUIN    #########'
-		print '############ 42 ##############'
-		print '##############################'
-		pprint.pprint(self.puzzle)
-		print ''
 
 	def addNumber(self, list, number):
 		if number not in list:
